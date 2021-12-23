@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://livedemo00.template-help.com/wt_prod-19364/counters.html -->
+<html class="wide wow-animation desktop landscape rd-navbar-static-linked" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Counters</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <script type="text/javascript" async="" src="./counters_files/ec.js.download"></script><script type="text/javascript" async="" src="./counters_files/analytics.js.download"></script><script async="" src="./counters_files/gtm.js.download"></script><script src="./counters_files/3ts2ksMwXvKRuG480KNifJ2_JNM.js.download"></script><script src="./counters_files/4o300efCt-CXoq1JEC-sVReFz48.js.download"></script><link rel="icon" href="https://livedemo00.template-help.com/wt_prod-19364/images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="./counters_files/css">
+    <link rel="stylesheet" href="./counters_files/bootstrap.css">
+    <link rel="stylesheet" href="./counters_files/fonts.css">
+    <link rel="stylesheet" href="./counters_files/style.css" id="main-styles-link">
+    <!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" href="data:text/css;charset=utf-8;base64,Y2xvdWRmbGFyZS1hcHBbYXBwLWlkPSJhLWJldHRlci1icm93c2VyIl0gewogIGRpc3BsYXk6IGJsb2NrOwogIGJhY2tncm91bmQ6ICM0NTQ4NGQ7CiAgY29sb3I6ICNmZmY7CiAgbGluZS1oZWlnaHQ6IDEuNDU7CiAgcG9zaXRpb246IGZpeGVkOwogIHotaW5kZXg6IDkwMDAwMDAwOwogIHRvcDogMDsKICBsZWZ0OiAwOwogIHJpZ2h0OiAwOwogIHBhZGRpbmc6IC41ZW0gMWVtOwogIHRleHQtYWxpZ246IGNlbnRlcjsKICAtd2Via2l0LXVzZXItc2VsZWN0OiBub25lOwogICAgIC1tb3otdXNlci1zZWxlY3Q6IG5vbmU7CiAgICAgIC1tcy11c2VyLXNlbGVjdDogbm9uZTsKICAgICAgICAgIHVzZXItc2VsZWN0OiBub25lOwp9CgpjbG91ZGZsYXJlLWFwcFthcHAtaWQ9ImEtYmV0dGVyLWJyb3dzZXIiXVtkYXRhLXZpc2liaWxpdHk9ImhpZGRlbiJdIHsKICBkaXNwbGF5OiBub25lOwp9CgpjbG91ZGZsYXJlLWFwcFthcHAtaWQ9ImEtYmV0dGVyLWJyb3dzZXIiXSBjbG91ZGZsYXJlLWFwcC1tZXNzYWdlIHsKICBkaXNwbGF5OiBibG9jazsKfQoKY2xvdWRmbGFyZS1hcHBbYXBwLWlkPSJhLWJldHRlci1icm93c2VyIl0gYSB7CiAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7CiAgY29sb3I6ICNlYmViZjQ7Cn0KCmNsb3VkZmxhcmUtYXBwW2FwcC1pZD0iYS1iZXR0ZXItYnJvd3NlciJdIGE6aG92ZXIsCmNsb3VkZmxhcmUtYXBwW2FwcC1pZD0iYS1iZXR0ZXItYnJvd3NlciJdIGE6YWN0aXZlIHsKICBjb2xvcjogI2RiZGJlYjsKfQoKY2xvdWRmbGFyZS1hcHBbYXBwLWlkPSJhLWJldHRlci1icm93c2VyIl0gY2xvdWRmbGFyZS1hcHAtY2xvc2UgewogIGRpc3BsYXk6IGJsb2NrOwogIGN1cnNvcjogcG9pbnRlcjsKICBmb250LXNpemU6IDEuNWVtOwogIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICByaWdodDogLjRlbTsKICB0b3A6IC4zNWVtOwogIGhlaWdodDogMWVtOwogIHdpZHRoOiAxZW07CiAgbGluZS1oZWlnaHQ6IDE7Cn0KCmNsb3VkZmxhcmUtYXBwW2FwcC1pZD0iYS1iZXR0ZXItYnJvd3NlciJdIGNsb3VkZmxhcmUtYXBwLWNsb3NlOmFjdGl2ZSB7CiAgLXdlYmtpdC10cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTsKICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpOwp9CgpjbG91ZGZsYXJlLWFwcFthcHAtaWQ9ImEtYmV0dGVyLWJyb3dzZXIiXSBjbG91ZGZsYXJlLWFwcC1jbG9zZTpob3ZlciB7CiAgb3BhY2l0eTogLjllbTsKICBjb2xvcjogI2ZmZjsKfQo="></head>
+  <body class="">
+    <div class="preloader loaded">
+      <div class="preloader-body">
+        <div class="cssload-container"><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+    <div class="page animated" style="animation-duration: 500ms;">
+      <!-- Page Header-->
+      <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap" style="height: 86.5938px;">
+          <nav class="rd-navbar rd-navbar-classic rd-navbar-original rd-navbar-static rd-navbar--is-stuck" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main toggle-original-elements">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle toggle-original" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!-- RD Navbar Brand-->
+                  <div class="rd-navbar-brand"><a class="brand" href="https://livedemo00.template-help.com/wt_prod-19364/"><img src="./counters_files/logo-default-161x49.png" alt="" width="161" height="49"></a></div>
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap toggle-original-elements">
+                    <!-- RD Navbar Basket-->
+                    <div class="rd-navbar-basket-wrap">
+                      <button class="rd-navbar-basket fl-bigmug-line-shopping198 toggle-original" data-rd-navbar-toggle=".cart-inline"><span>2</span></button>
+                      <div class="cart-inline toggle-original-elements">
+                        <div class="cart-inline-header">
+                          <h5 class="cart-inline-title">In cart:<span> 2</span> Products</h5>
+                          <h6 class="cart-inline-title">Total price:<span> $800</span></h6>
+                        </div>
+                        <div class="cart-inline-body">
+                          <div class="cart-inline-item">
+                            <div class="unit align-items-center">
+                              <div class="unit-left"><a class="cart-inline-figure" href="https://livedemo00.template-help.com/wt_prod-19364/single-course.html"><img src="./counters_files/product-mini-9-100x100.jpg" alt="" width="100" height="100"></a></div>
+                              <div class="unit-body">
+                                <h6 class="cart-inline-name"><a href="https://livedemo00.template-help.com/wt_prod-19364/single-course.html">Business Finance: Solving Key Financial Problems</a></h6>
+                                <div>
+                                  <div class="group-xs">
+                                    <div class="table-cart-stepper">
+                                      <div class="stepper "><input class="form-input stepper-input" type="number" data-zeros="true" value="1" min="1" max="1000"><span class="stepper-arrow up"></span><span class="stepper-arrow down"></span></div>
+                                    </div>
+                                    <h6 class="cart-inline-title">$550</h6>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cart-inline-item">
+                            <div class="unit align-items-center">
+                              <div class="unit-left"><a class="cart-inline-figure" href="https://livedemo00.template-help.com/wt_prod-19364/single-course.html"><img src="./counters_files/product-mini-10-100x100.jpg" alt="" width="100" height="100"></a></div>
+                              <div class="unit-body">
+                                <h6 class="cart-inline-name"><a href="https://livedemo00.template-help.com/wt_prod-19364/single-course.html">Employee Behavior Management Essentials</a></h6>
+                                <div>
+                                  <div class="group-xs">
+                                    <div class="table-cart-stepper">
+                                      <div class="stepper "><input class="form-input stepper-input" type="number" data-zeros="true" value="1" min="1" max="1000"><span class="stepper-arrow up"></span><span class="stepper-arrow down"></span></div>
+                                    </div>
+                                    <h6 class="cart-inline-title">$250</h6>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="cart-inline-footer">
+                          <div class="group-sm"><a class="button button-md button-default-outline-2 button-wapasha" href="https://livedemo00.template-help.com/wt_prod-19364/counters.html#">Go to cart</a><a class="button button-md button-primary button-pipaluk" href="https://livedemo00.template-help.com/wt_prod-19364/counters.html#">Checkout</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- RD Navbar Search-->
+                    <div class="rd-navbar-search toggle-original-elements">
+                      <button class="rd-navbar-search-toggle toggle-original" data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
+                      <form class="rd-search" action="https://livedemo00.template-help.com/wt_prod-19364/search-results.html" data-search-live="rd-search-results-live" method="GET">
+                        <div class="form-wrap">
+                          <label class="form-label rd-input-label" for="rd-navbar-search-form-input">Search...</label>
+                          <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
+                          <div class="rd-search-results-live cleared" id="rd-search-results-live"></div>
+                        </div>
+                        <button class="rd-search-form-submit fl-bigmug-line-search74" type="submit"></button>
+                      </form>
+                    </div>
+                    <!-- RD Navbar Nav-->
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="https://livedemo00.template-help.com/wt_prod-19364/">Home</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="https://livedemo00.template-help.com/wt_prod-19364/about-us.html">About</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="https://livedemo00.template-help.com/wt_prod-19364/courses.html">Courses</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="https://livedemo00.template-help.com/wt_prod-19364/events.html">Events</a>
+                      </li>
+                      <li class="rd-nav-item active rd-navbar--has-megamenu rd-navbar-submenu focus"><a class="rd-nav-link" href="https://livedemo00.template-help.com/wt_prod-19364/counters.html#">Pages</a><span class="rd-navbar-submenu-toggle"></span>
+                        <!-- RD Navbar Megamenu-->
+                        <ul class="rd-menu rd-navbar-megamenu rd-navbar-open-right">
+                          <li class="rd-megamenu-item">
+                            <div>
+                              <h5 class="rd-megamenu-title">Elements</h5>
+                              <ul class="rd-megamenu-list">
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/typography.html">Typography</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/buttons.html">Buttons</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/forms.html">Forms</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/tabs-and-accordions.html">Tabs and Accordions</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/counters.html">Counters</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/icons-with-text.html">Icons with Text</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/progress-bars.html">Progress Bars</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/calls-to-action.html">Calls to Action</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/grid-system.html">Grid System</a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="rd-megamenu-item">
+                            <div>
+                              <h5 class="rd-megamenu-title">Additional pages</h5>
+                              <ul class="rd-megamenu-list">
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/services.html">Services</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/services-2.html">Services 2</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/single-course.html">Single Course</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/single-service.html">Single Service</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/our-team.html">Our Team</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/testimonials.html">Testimonials</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/404-page.html">404 Page</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/503-page.html">503 Page</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/pricing.html">Pricing</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/single-event.html">Single Event</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/coming-soon.html">Coming Soon</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/contact-us-2.html">Contact Us 2</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/faq.html">FAQ</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="https://livedemo00.template-help.com/wt_prod-19364/search-results.html">Search results</a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="rd-megamenu-item rd-megamenu-carousel">
+                            <div>
+                              <h5 class="rd-megamenu-title">Recent courses</h5>
+                              <!-- Owl Carousel-->
+                              <div class="owl-carousel owl-navbar owl-loaded owl-drag" data-items="1" data-xl-items="2" data-xxl-items="3" data-margin="16" data-dots="true" data-loop="false" data-autoplay="false" style="">
+                                <!-- Thumbnail Classic-->
+                                
+                                <!-- Thumbnail Classic-->
+                                
+                                <!-- Thumbnail Classic-->
+                                
+                                <!-- Thumbnail Classic-->
+                                
+                                <!-- Thumbnail Classic-->
+                                
+                                <!-- Thumbnail Classic-->
+                                
+                              <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 948px;"><div class="owl-item active" style="width: 142px; margin-right: 16px;"><article class="thumbnail thumbnail-mary thumbnail-xxs">
+                                  <div class="thumbnail-mary-figure"><img src="./counters_files/navbar-1-272x288.jpg" alt="" width="272" height="288">
+                                  </div>
+                                  <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="https://livedemo00.template-help.com/wt_prod-19364/images/navbar-1-1200x800-original.jpg" data-lightgallery="item"><img src="./counters_files/navbar-1-272x288.jpg" alt="" width="272" height="288"></a>
+                                    <h6 class="thumbnail-mary-title"><a href="https://livedemo00.template-help.com/wt_prod-19364/counters.html#">Course #1</a></h6>
+                                  </div>
+                                </article></div><div class="owl-item active" style="width: 142px; margin-right: 16px;"><article class="thumbnail thumbnail-mary thumbnail-xxs">
+                                  <div class="thumbnail-mary-figure"><img src="./counters_files/navbar-2-272x288.jpg" alt="" width="272" height="288">
+                                  </div>
+                                  <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="https://livedemo00.template-help.com/wt_prod-19364/images/navbar-2-1200x800-original.jpg" data-lightgallery="item"><img src="./counters_files/navbar-2-272x288.jpg" alt="" width="272" height="288"></a>
+                                    <h6 class="thumbnail-mary-title"><a href="https://livedemo00.template-help.com/wt_prod-19364/counters.html#">Course #2</a></h6>
+                                  </div>
+                                </article></div><div class="owl-item" style="width: 142px; margin-right: 16px;"><article class="thumbnail thumbnail-mary thumbnail-xxs">
+                                  <div class="thumbnail-mary-figure"><img src="./counters_files/navbar-3-272x288.jpg" alt="" width="272" height="288">
+                                  </div>
+                                  <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="https://livedemo00.template-help.com/wt_prod-19364/images/navbar-3-1200x800-original.jpg" data-lightgallery="item"><img src="./counters_files/navbar-3-272x288.jpg" alt="" width="272" height="288"></a>
+                                    <h6 class="thumbnail-mary-title"><a href="https://livedemo00.template-help.com/wt_prod-19364/counters.html#">Course #3</a></h6>
+                                  </div>
+                                </article></div><div class="owl-item" style="width: 142px; margin-right: 16px;"><article class="thumbnail thumbnail-mary thumbnail-xxs">
+                                  <div class="thumbnail-mary-figure"><img src="./counters_files/navbar-4-272x288.jpg" alt="" width="272" height="288">
+                                  </div>
+                                  <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="https://livedemo00.template-help.com/wt_prod-19364/images/navbar-4-1200x800-original.jpg" data-lightgallery="item"><img src="./counters_files/navbar-4-272x288.jpg" alt="" width="272" height="288"></a>
+                                    <h6 class="thumbnail-mary-title"><a href="https://livedemo00.template-help.com/wt_prod-19364/counters.html#">Course #4</a></h6>
+                                  </div>
+                                </article></div><div class="owl-item" style="width: 142px; margin-right: 16px;"><article class="thumbnail thumbnail-mary thumbnail-xxs">
+                                  <div class="thumbnail-mary-figure"><img src="./counters_files/navbar-5-272x288.jpg" alt="" width="272" height="288">
+                                  </div>
+                                  <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="https://livedemo00.template-help.com/wt_prod-19364/images/navbar-5-1200x800-original.jpg" data-lightgallery="item"><img src="./counters_files/navbar-5-272x288.jpg" alt="" width="272" height="288"></a>
+                                    <h6 class="thumbnail-mary-title"><a href="https://livedemo00.template-help.com/wt_prod-19364/counters.html#">Course #5</a></h6>
+                                  </div>
+                                </article></div><div class="owl-item" style="width: 142px; margin-right: 16px;"><article class="thumbnail thumbnail-mary thumbnail-xxs">
+                                  <div class="thumbnail-mary-figure"><img src="./counters_files/navbar-6-272x288.jpg" alt="" width="272" height="288">
+                                  </div>
+                                  <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="https://livedemo00.template-help.com/wt_prod-19364/images/navbar-6-1200x800-original.jpg" data-lightgallery="item"><img src="./counters_files/navbar-6-272x288.jpg" alt="" width="272" height="288"></a>
+                                    <h6 class="thumbnail-mary-title"><a href="https://livedemo00.template-help.com/wt_prod-19364/counters.html#">Course #6</a></h6>
+                                  </div>
+                                </article></div></div></div><div class="owl-nav disabled"><div class="owl-prev"></div><div class="owl-next"></div></div><div class="owl-dots"><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div></div>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="https://livedemo00.template-help.com/wt_prod-19364/contact-us.html">Contacts</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="rd-navbar-project-hamburger toggle-original" data-rd-navbar-toggle=".rd-navbar-main">
+                    <div class="project-hamburger"><span class="project-hamburger-arrow-top"></span><span class="project-hamburger-arrow-center"></span><span class="project-hamburger-arrow-bottom"></span></div>
+                    <div class="project-close"><span></span><span></span></div>
+                  </div>
+                  <div class="rd-navbar-project rd-navbar-classic-project">
+                    <h4 class="text-spacing-50">Our Works</h4>
+                    <div class="rd-navbar-project-content rd-navbar-classic-project-content">
+                      <div class="row" data-lightgallery="group">
+                        <div class="col-12">
+                          <!-- Thumbnail Classic-->
+                          <article class="thumbnail thumbnail-mary">
+                            <div class="thumbnail-mary-figure"><img src="./counters_files/gallery-image-1-330x240.jpg" alt="" width="330" height="240">
+                            </div>
+                            <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="https://livedemo00.template-help.com/wt_prod-19364/images/grid-gallery-4-1200x800-original.jpg" data-lightgallery="item"><img src="./counters_files/gallery-image-1-330x240.jpg" alt="" width="330" height="240"></a>
+                            </div>
+                          </article>
+                        </div>
+                        <div class="col-12">
+                          <!-- Thumbnail Classic-->
+                          <article class="thumbnail thumbnail-mary">
+                            <div class="thumbnail-mary-figure"><img src="./counters_files/gallery-image-2-330x240.jpg" alt="" width="330" height="240">
+                            </div>
+                            <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="https://livedemo00.template-help.com/wt_prod-19364/images/fullwidth-masonry-gallery-10-1200x800-original.jpg" data-lightgallery="item"><img src="./counters_files/gallery-image-2-330x240.jpg" alt="" width="330" height="240"></a>
+                            </div>
+                          </article>
+                        </div>
+                        <div class="col-12">
+                          <!-- Thumbnail Classic-->
+                          <article class="thumbnail thumbnail-mary">
+                            <div class="thumbnail-mary-figure"><img src="./counters_files/gallery-image-3-330x240.jpg" alt="" width="330" height="240">
+                            </div>
+                            <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="https://livedemo00.template-help.com/wt_prod-19364/images/fullwidth-gallery-4-1200x800-original.jpg" data-lightgallery="item"><img src="./counters_files/gallery-image-3-330x240.jpg" alt="" width="330" height="240"></a>
+                            </div>
+                          </article>
+                        </div>
+                        <div class="col-12">
+                          <!-- Thumbnail Classic-->
+                          <article class="thumbnail thumbnail-mary">
+                            <div class="thumbnail-mary-figure"><img src="./counters_files/gallery-image-4-330x240.jpg" alt="" width="330" height="240">
+                            </div>
+                            <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="https://livedemo00.template-help.com/wt_prod-19364/images/masonry-gallery-4-1200x800-original.jpg" data-lightgallery="item"><img src="./counters_files/gallery-image-4-330x240.jpg" alt="" width="330" height="240"></a>
+                            </div>
+                          </article>
+                        </div>
+                        <div class="col-12">
+                          <!-- Thumbnail Classic-->
+                          <article class="thumbnail thumbnail-mary">
+                            <div class="thumbnail-mary-figure"><img src="./counters_files/gallery-image-5-330x240.jpg" alt="" width="330" height="240">
+                            </div>
+                            <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="https://livedemo00.template-help.com/wt_prod-19364/images/fullwidth-masonry-gallery-6-1200x800-original.jpg" data-lightgallery="item"><img src="./counters_files/gallery-image-5-330x240.jpg" alt="" width="330" height="240"></a>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- Breadcrumbs -->
+      <section class="breadcrumbs-custom-inset">
+        <div class="breadcrumbs-custom context-dark bg-overlay-53">
+          <div class="container">
+            <h3 class="breadcrumbs-custom-title">Counters</h3>
+            <ul class="breadcrumbs-custom-path">
+              <li><a href="https://livedemo00.template-help.com/wt_prod-19364/index.html">Home</a></li>
+              <li><a href="https://livedemo00.template-help.com/wt_prod-19364/counters.html#">Pages</a></li>
+              <li class="active">Counters</li>
+            </ul>
+          </div>
+          <div class="box-position" style="background-image: url(images/bg-about.jpg);"></div>
+        </div>
+      </section>
+      <!-- Counter Modern-->
+      <section class="section section-xl bg-default">
+        <div class="container">
+          <div class="row row-30 justify-content-center">
+            <div class="col-8 col-sm-4">
+              <div class="counter-modern">
+                <div class="counter-modern-body">
+                  <div class="counter-modern-number"><span class="counter animated">12</span>
+                  </div>
+                  <div class="counter-modern-decor"></div>
+                  <h4 class="counter-modern-title">Business<br>awards</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-8 col-sm-4">
+              <div class="counter-modern">
+                <div class="counter-modern-body">
+                  <div class="counter-modern-number"><span class="counter animated">194</span>
+                  </div>
+                  <div class="counter-modern-decor"></div>
+                  <h4 class="counter-modern-title">Successful<br>projects</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-8 col-sm-4">
+              <div class="counter-modern">
+                <div class="counter-modern-body">
+                  <div class="counter-modern-number"><span class="counter animated">25</span>
+                  </div>
+                  <div class="counter-modern-decor"></div>
+                  <h4 class="counter-modern-title">Team<br>members</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Counter Classic-->
+      <section class="section section-fluid bg-default">
+        <div class="parallax-container" data-parallax-img="images/bg-counter-2.jpg"><div class="material-parallax parallax"><img src="./counters_files/bg-counter-2.jpg" alt="" style="display: block; transform: translate3d(-50%, 337px, 0px);"></div>
+          <div class="parallax-content section-xl context-dark bg-overlay-26">
+            <div class="container">
+              <div class="row row-50 justify-content-center border-classic">
+                <div class="col-sm-6 col-md-5 col-lg-3">
+                  <div class="counter-classic">
+                    <div class="counter-classic-number"><span class="counter animated">12</span>
+                    </div>
+                    <h5 class="counter-classic-title">new courses</h5>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-3">
+                  <div class="counter-classic">
+                    <div class="counter-classic-number"><span class="counter animated">194</span>
+                    </div>
+                    <h5 class="counter-classic-title">partners</h5>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-3">
+                  <div class="counter-classic">
+                    <div class="counter-classic-number"><span class="counter animated">5</span><span class="symbol">k</span>
+                    </div>
+                    <h5 class="counter-classic-title">annual students</h5>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-3">
+                  <div class="counter-classic">
+                    <div class="counter-classic-number"><span class="counter animated">25</span>
+                    </div>
+                    <h5 class="counter-classic-title">teachers</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Counter Creative-->
+      <section class="section section-xl bg-default">
+        <div class="container">
+          <div class="row row-50 justify-content-center border-classic border-classic-big">
+            <div class="col-sm-6 col-md-5 col-lg-3">
+              <div class="counter-creative">
+                <div class="counter-creative-number"><span class="counter animated">12</span><span class="icon counter-creative-icon fl-bigmug-line-trophy55"></span>
+                </div>
+                <h6 class="counter-creative-title">Business awards</h6>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-5 col-lg-3">
+              <div class="counter-creative">
+                <div class="counter-creative-number"><span class="counter animated">2</span><span class="symbol">k</span><span class="icon counter-creative-icon fl-bigmug-line-up104"></span>
+                </div>
+                <h6 class="counter-creative-title">Designed interiors</h6>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-5 col-lg-3">
+              <div class="counter-creative">
+                <div class="counter-creative-number"><span class="counter animated">679</span><span class="icon counter-creative-icon fl-bigmug-line-sun81"></span>
+                </div>
+                <h6 class="counter-creative-title">Happy clients every day</h6>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-5 col-lg-3">
+              <div class="counter-creative">
+                <div class="counter-creative-number"><span class="counter animated">13</span><span class="icon counter-creative-icon fl-bigmug-line-user143"></span>
+                </div>
+                <h6 class="counter-creative-title">Team members</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Counter Abby-->
+      <section class="section section-fluid bg-default">
+        <div class="parallax-container" data-parallax-img="images/bg-counter-3.jpg"><div class="material-parallax parallax"><img src="./counters_files/bg-counter-3.jpg" alt="" style="display: block; transform: translate3d(-50%, 250px, 0px);"></div>
+          <div class="parallax-content section-xl context-dark">
+            <div class="container">
+              <div class="row row-30 justify-content-center">
+                <div class="col-sm-6 col-lg-3">
+                  <div class="counter-classic counter-abby">
+                    <div class="counter-classic-number"><span class="counter animated">12</span>
+                    </div>
+                    <h5 class="counter-classic-title">Design awards</h5>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                  <div class="counter-classic counter-abby">
+                    <div class="counter-classic-number"><span class="counter animated">194</span>
+                    </div>
+                    <h5 class="counter-classic-title">Projects</h5>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                  <div class="counter-classic counter-abby">
+                    <div class="counter-classic-number"><span class="counter animated">2</span><span class="symbol">k</span>
+                    </div>
+                    <h5 class="counter-classic-title">Designed interiors</h5>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                  <div class="counter-classic counter-abby">
+                    <div class="counter-classic-number"><span class="counter animated">25</span>
+                    </div>
+                    <h5 class="counter-classic-title">Team members</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Counter Amy-->
+      <section class="section section-xl bg-default">
+        <div class="container">
+          <div class="row row-50 justify-content-center align-items-center align-items-lg-start text-left">
+            <div class="col-md-6 col-lg-5 col-xl-4 text-center"><a class="text-img" href="https://livedemo00.template-help.com/wt_prod-19364/about-us.html"><span class="counter animated">10</span></a></div>
+            <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
+              <div class="text-width-extra-small offset-top-lg-24 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                <h3 class="title-decoration-lines-left">Years of experience</h3>
+                <p class="text-gray-500">Creator is a renowned interior design studio established in 2008. We create new interiors for homes and offices.</p><a class="button button-secondary button-pipaluk" href="https://livedemo00.template-help.com/wt_prod-19364/counters.html#">Get in touch</a>
+              </div>
+            </div>
+            <div class="col-sm-10 col-md-8 col-lg-6 col-xl-4 wow fadeInRight" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInRight;">
+              <div class="row justify-content-center border-2-column offset-top-xl-26">
+                <div class="col-9 col-sm-6">
+                  <div class="counter-amy">
+                    <div class="counter-amy-number"><span class="counter animated">2</span><span class="symbol">k</span>
+                    </div>
+                    <h6 class="counter-amy-title">Interiors</h6>
+                  </div>
+                </div>
+                <div class="col-9 col-sm-6">
+                  <div class="counter-amy">
+                    <div class="counter-amy-number"><span class="counter animated">40</span>
+                    </div>
+                    <h6 class="counter-amy-title">Monthly designs</h6>
+                  </div>
+                </div>
+                <div class="col-9 col-sm-6">
+                  <div class="counter-amy">
+                    <div class="counter-amy-number"><span class="counter animated">12</span>
+                    </div>
+                    <h6 class="counter-amy-title">Awards</h6>
+                  </div>
+                </div>
+                <div class="col-9 col-sm-6">
+                  <div class="counter-amy">
+                    <div class="counter-amy-number"><span class="counter animated">26</span>
+                    </div>
+                    <h6 class="counter-amy-title">Employees</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Page Footer-->
+      <footer class="section footer-variant-2 footer-modern context-dark">
+        <div class="footer-variant-2-content">
+          <div class="container">
+            <div class="row row-40 justify-content-between">
+              <div class="col-sm-6 col-lg-4 col-xl-3">
+                <div class="oh-desktop">
+                  <div class="wow slideInRight" data-wow-delay="0s" style="visibility: visible; animation-delay: 0s; animation-name: slideInRight;">
+                    <div class="footer-brand"><a href="https://livedemo00.template-help.com/wt_prod-19364/"><img src="./counters_files/logo-inverse-162x51.png" alt="" width="162" height="51"></a></div>
+                    <p>Providing professional online business education for students from all over the world since 1999.</p>
+                    <ul class="footer-contacts d-inline-block d-md-block">
+                      <li>
+                        <div class="unit unit-spacing-xs">
+                          <div class="unit-left"><span class="icon fa fa-phone"></span></div>
+                          <div class="unit-body"><a class="link-phone" href="tel:#">+1 323-913-4688</a></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="unit unit-spacing-xs">
+                          <div class="unit-left"><span class="icon fa fa-clock-o"></span></div>
+                          <div class="unit-body">
+                            <p>Mon-Sat: 07:00AM - 05:00PM</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="unit unit-spacing-xs">
+                          <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
+                          <div class="unit-body"><a class="link-location" href="https://livedemo00.template-help.com/wt_prod-19364/counters.html#">4730 Crystal Springs Dr, Los Angeles, CA 90027</a></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 col-xl-4">
+                <div class="oh-desktop">
+                  <div class="inset-top-18 wow slideInDown" data-wow-delay="0s" style="visibility: visible; animation-delay: 0s; animation-name: slideInDown;">
+                    <h5 class="text-spacing-75">Newsletter</h5>
+                    <p>Join Our Email List for Tips and Useful Information</p>
+                    <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="https://livedemo00.template-help.com/wt_prod-19364/bat/rd-mailform.php" novalidate="novalidate">
+                      <div class="form-wrap">
+                        <input class="form-input form-control-has-validation" id="subscribe-form-5-email" type="email" name="email" data-constraints="@Email @Required"><span class="form-validation"></span>
+                        <label class="form-label rd-input-label" for="subscribe-form-5-email">Enter Your E-mail</label>
+                      </div>
+                      <button class="button button-block button-secondary-4 button-ujarak" type="submit">Subscribe</button>
+                    </form>
+                    <div class="group-lg group-middle">
+                      <p class="text-white">Follow Us</p>
+                      <div>
+                        <ul class="list-inline list-inline-sm footer-social-list-2">
+                          <li><a class="icon fa fa-facebook" href="https://livedemo00.template-help.com/wt_prod-19364/counters.html#"></a></li>
+                          <li><a class="icon fa fa-twitter" href="https://livedemo00.template-help.com/wt_prod-19364/counters.html#"></a></li>
+                          <li><a class="icon fa fa-google-plus" href="https://livedemo00.template-help.com/wt_prod-19364/counters.html#"></a></li>
+                          <li><a class="icon fa fa-instagram" href="https://livedemo00.template-help.com/wt_prod-19364/counters.html#"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-xl-3">
+                <div class="oh-desktop">
+                  <div class="inset-top-18 wow slideInLeft" data-wow-delay="0s" style="visibility: visible; animation-delay: 0s; animation-name: slideInLeft;">
+                    <h5 class="text-spacing-75">Gallery</h5>
+                    <div class="row row-10 gutters-10">
+                      <div class="col-6 col-sm-3 col-lg-6">
+                        <!-- Thumbnail Classic-->
+                        <article class="thumbnail thumbnail-mary">
+                          <div class="thumbnail-mary-figure"><img src="./counters_files/gallery-image-10-128x120.jpg" alt="" width="128" height="120">
+                          </div>
+                          <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="https://livedemo00.template-help.com/wt_prod-19364/images/grid-gallery-4-1200x800-original.jpg" data-lightgallery="item"><img src="./counters_files/gallery-image-10-128x120.jpg" alt="" width="128" height="120"></a>
+                          </div>
+                        </article>
+                      </div>
+                      <div class="col-6 col-sm-3 col-lg-6">
+                        <!-- Thumbnail Classic-->
+                        <article class="thumbnail thumbnail-mary">
+                          <div class="thumbnail-mary-figure"><img src="./counters_files/gallery-image-11-128x120.jpg" alt="" width="128" height="120">
+                          </div>
+                          <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="https://livedemo00.template-help.com/wt_prod-19364/images/gallery-image-11-1200x800-original.jpg" data-lightgallery="item"><img src="./counters_files/gallery-image-11-128x120.jpg" alt="" width="128" height="120"></a>
+                          </div>
+                        </article>
+                      </div>
+                      <div class="col-6 col-sm-3 col-lg-6">
+                        <!-- Thumbnail Classic-->
+                        <article class="thumbnail thumbnail-mary">
+                          <div class="thumbnail-mary-figure"><img src="./counters_files/gallery-image-12-128x120.jpg" alt="" width="128" height="120">
+                          </div>
+                          <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="https://livedemo00.template-help.com/wt_prod-19364/images/fullwidth-masonry-gallery-11-1200x800-original.jpg" data-lightgallery="item"><img src="./counters_files/gallery-image-12-128x120.jpg" alt="" width="128" height="120"></a>
+                          </div>
+                        </article>
+                      </div>
+                      <div class="col-6 col-sm-3 col-lg-6">
+                        <!-- Thumbnail Classic-->
+                        <article class="thumbnail thumbnail-mary">
+                          <div class="thumbnail-mary-figure"><img src="./counters_files/gallery-image-13-128x120.jpg" alt="" width="128" height="120">
+                          </div>
+                          <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="https://livedemo00.template-help.com/wt_prod-19364/images/gallery-image-13-1200x800-original.jpg" data-lightgallery="item"><img src="./counters_files/gallery-image-13-128x120.jpg" alt="" width="128" height="120"></a>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-variant-2-bottom-panel">
+          <div class="container">
+            <!-- Rights-->
+            <div class="group-sm group-sm-justify">
+              <p class="rights"><span>©&nbsp;</span><span class="copyright-year">2018</span> <span>Business School</span>. All rights reserved
+              </p>
+              <p class="rights"><a href="https://livedemo00.template-help.com/wt_prod-19364/privacy-policy.html">Privacy Policy</a></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="./counters_files/core.min.js.download"></script>
+    <script src="./counters_files/script.js.download"></script>
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P9FT69');</script><!-- End Google Tag Manager -->
+<a href="https://livedemo00.template-help.com/wt_prod-19364/counters.html#" id="ui-to-top" class="ui-to-top fa fa-angle-up active"></a><script type="text/javascript" id="">(function(){var b=document.location.search.split("aff\x3d")[1];b&&document.querySelectorAll("a").forEach(function(a){0==a.href.indexOf("https://www.templatemonster.com")&&(0<a.href.indexOf("?")?a.href=a.href+"\x26aff\x3d"+b:a.href=a.href+"?aff\x3d"+b)});var c=document.location.search.split("i\x3d")[1],d=document.location.search.split("pr_code\x3d")[1];c&&d&&document.querySelectorAll("a").forEach(function(a){0==a.href.indexOf("https://www.templatemonster.com")&&(a.href="https://www.templatehelp.com/preset/pr_preview.php?i\x3d"+
+c+"\x26pr_code\x3d"+d)})})();</script>
+</body><!-- Google Tag Manager --></html>
